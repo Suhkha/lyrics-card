@@ -1,0 +1,39 @@
+main__bubble(size)
+	position relative
+	display inline-block
+	background $east_side
+	width size
+	height size
+	border-radius 50%
+	transition height 1.5s ease-in-out, width 1.5s ease-in-out
+	transition-delay 0.1s
+	
+configuration__layer()
+	&::before
+	&::after
+		position absolute
+		top 50%
+		left 50%
+		border-radius 50%
+		content ''
+		transition transform 1.5s 
+		transform translateX(-50%) translateY(-50%) scale(0.2)
+	
+layer($type, $size, $color, $zindex)
+	&::{$type}
+		width $size
+		height $size
+		background $color
+		z-index $zindex
+
+hover__layer()
+	&:hover::before
+	&:hover::after
+		opacity 1
+		transform translateX(-50%) translateY(-50%) scale(1)
+
+persistent__layer()
+	&::before
+	&::after
+		opacity 1
+		transform translateX(-50%) translateY(-50%) scale(1)

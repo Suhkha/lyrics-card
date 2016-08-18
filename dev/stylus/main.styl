@@ -1,0 +1,54 @@
+$affair = #8C4D9D
+$wisteria = #9963a7
+$east_side = #8E529E
+$white = #FFFFFF
+$gray = #C0C0C0
+$black = #000000
+
+body
+	background $affair
+	font-family 'Titillium Web', sans-serif
+
+.container
+	background transparent
+	margin 60px auto
+
+.bubble
+	&--type-one
+	&--type-five
+	&--type-three
+		margin-left 10%
+	&--type-two	
+	&--type-four
+		margin-left 15%
+
+.song__cover	
+	opacity 0.5
+
+.song
+	display none
+
+@import "_functions.styl"
+			
+.bubble__song--hover,.song__cover
+	main__bubble(120px)
+	
+.bubble__song--hover
+	configuration__layer()
+	layer("after",150px, $wisteria, -10)
+	layer("before",220px, $east_side, -15)
+	hover__layer()
+	
+.bubble__song--click, .song__cover-clic
+	main__bubble(400px)
+	@extends .song__cover	
+
+.bubble__song--click
+	configuration__layer()
+	layer("after",500px, $wisteria, -10)
+	layer("before",700px, $east_side, -15)
+	persistent__layer()
+	
+
+@import "_song.styl"
+@import "_media.styl"

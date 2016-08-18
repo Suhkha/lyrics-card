@@ -1,12 +1,12 @@
 var gulp 			= require('gulp'),
-	nib 			= require('nib'),
-	stylus 			= require('gulp-stylus'),
-		autoprefixer 	= require('gulp-autoprefixer'),
-		minifyCSS 		= require('gulp-minify-css'),
-		jade 			= require('gulp-jade'),
-		uglify 			= require('gulp-uglify'),
-		rename 			= require('gulp-rename'),
-		concat 			= require('gulp-concat'),
+nib 			= require('nib'),
+stylus 			= require('gulp-stylus'),
+autoprefixer 	= require('gulp-autoprefixer'),
+minifyCSS 		= require('gulp-minify-css'),
+jade 			= require('gulp-jade'),
+uglify 			= require('gulp-uglify'),
+rename 			= require('gulp-rename'),
+concat 			= require('gulp-concat'),
 		connect  		= require('gulp-connect'); //Live-reload
 
 //manage tasks
@@ -21,12 +21,12 @@ gulp.task('css', function(){
 		.pipe(rename('main.css'))
 		.pipe(gulp.dest('build/styles'))
 		.pipe(connect.reload())
-});
+	});
 
 gulp.task('bootstrap', function(){
 	gulp.src(['bower_components/bootstrap/dist/css/bootstrap.min.css'])
-		.pipe(rename('bootstrap.min.css'))
-		.pipe(gulp.dest('build/styles'))
+	.pipe(rename('bootstrap.min.css'))
+	.pipe(gulp.dest('build/styles'))
 });
 
 gulp.task('js', function(){
@@ -35,10 +35,10 @@ gulp.task('js', function(){
 		'bower_components/modernizr/modernizr.js',
 		'bower_components/handlebars/handlebars.js',
 		'bower_components/spotify-web-api-js/src/spotify-web-api.js'
-	])
-		.pipe(concat('vendor.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('build/scripts'))
+		])
+	.pipe(concat('vendor.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('build/scripts'))
 });
 
 
