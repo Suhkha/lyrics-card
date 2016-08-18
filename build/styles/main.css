@@ -15,18 +15,14 @@ body {
 .bubble--type-four {
   margin-left: 15%;
 }
-.song__cover,
-.bubble__song--click,
-.song__cover-clic {
+.song__cover {
   opacity: 0.5;
 }
 .song {
   display: none;
 }
 .bubble__song--hover,
-.song__cover,
-.bubble__song--click,
-.song__cover-clic {
+.song__cover {
   position: relative;
   display: inline-block;
   background: #8e529e;
@@ -71,7 +67,7 @@ body {
           transform: translateX(-50%) translateY(-50%) scale(1);
 }
 .bubble__song--click,
-.song__cover-clic {
+.song__cover--click {
   position: relative;
   display: inline-block;
   background: #8e529e;
@@ -82,6 +78,7 @@ body {
   transition: height 1.5s ease-in-out, width 1.5s ease-in-out;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
+  opacity: 0.8;
 }
 .bubble__song--click::before,
 .bubble__song--click::after {
