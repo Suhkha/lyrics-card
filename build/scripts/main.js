@@ -24,8 +24,12 @@ function bubbleEfect(){
 
 				bubble__song = this.classList.add("bubble__song--click");
 				song__cover[1].classList.add("song__cover--click");
-				song.classList.add("song");
-				song.classList.remove("hidden__song");
+				
+				setTimeout(function(){
+					song.classList.add("song");
+					song.classList.remove("hidden__song");
+				},2000);
+				
 			}
 
 		});
