@@ -25,8 +25,7 @@ body
 .song__cover	
 	opacity 0.5
 
-.song
-	display none
+
 
 @import "_functions.styl"
 			
@@ -41,10 +40,8 @@ body
 	
 .bubble__song--click, .song__cover--click
 	main__bubble(400px)
-	opacity 0.8	
 
 .bubble__song--click
-	configuration__layer()
 	layer("after",500px, $wisteria, -10)
 	layer("before",700px, $east_side, -15)
 	persistent__layer()
