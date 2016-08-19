@@ -18,6 +18,9 @@ body {
 .song__cover {
   opacity: 0.5;
 }
+.hidden__song {
+  display: none;
+}
 .bubble__song--hover,
 .song__cover {
   position: relative;
