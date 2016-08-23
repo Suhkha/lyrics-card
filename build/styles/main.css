@@ -6,6 +6,12 @@ body {
   background: transparent;
   margin: 60px auto;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 .bubble--type-one,
 .bubble--type-five,
 .bubble--type-three {
@@ -105,7 +111,7 @@ body {
 .song {
   color: #fff;
   position: absolute;
-  margin: -20% 0 0 27%;
+  margin: -20% 0 0 25%;
   opacity: 0;
   -webkit-animation: fadeIn ease-in 1;
           animation: fadeIn ease-in 1;
@@ -116,7 +122,34 @@ body {
 }
 .song__lyrics {
   font-size: 30px;
-  width: 150px;
+  width: 30%;
+}
+.song__name {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.song__artist {
+  font-size: 15px;
+  font-style: italic;
+  text-decoration: underline;
+}
+.song__play {
+  background: #fff;
+  border-radius: 50%;
+  margin: 5% 5% 0 -15%;
+}
+.song__play .fa-play {
+  color: #8e529e;
+  padding: 15px;
+  font-size: 25px;
+  margin-left: 5%;
+}
+.song__info {
+  margin-top: 5%;
+}
+.song__info span {
+  display: block;
 }
 @media (min-width: 0) and (max-width: 413px) {
   .bubble--type-one,
