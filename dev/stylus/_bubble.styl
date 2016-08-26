@@ -1,8 +1,5 @@
-.bubble__song
-	display inline-block	
-		
 .bubble__song--hover,.song__cover
-	main__bubble(170px)
+	main__bubble(70px)
 	
 .bubble__song--hover
 	configuration__layer()
@@ -11,10 +8,26 @@
 	hover__layer()
 	
 	
+	
 .bubble__song--click, .song__cover--click
 	main__bubble(400px)
+	
 
 .bubble__song--click
 	layer("after",500px, $wisteria, -10)
 	layer("before",700px, $east_side, -15)
 	persistent__layer()
+
+.bubble
+	&--one
+		transform translate(20%, 0%)
+	&--two
+		transform translate(10%, 0%)
+	&--three
+		transform translate(17%, 0%)
+	&--four
+		transform translate(11%, -10%)
+	&--five
+		transform translate(2%, -25%)
+	&--six
+		transform translate(18%, -80%)

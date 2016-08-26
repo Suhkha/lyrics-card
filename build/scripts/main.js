@@ -9,7 +9,7 @@ function bubbleEfect(){
 	for (var i = 0; i < bubbles.length; i++) {
 		
 		bubbles[i].addEventListener("click", function(){
-
+			parent_bubble = this.parentNode;
 			song__cover = this.childNodes;
 			song = song__cover[1].nextElementSibling;
 
@@ -21,7 +21,7 @@ function bubbleEfect(){
 				song.classList.remove("song");
 
 			}else{
-
+				
 				bubble__song = this.classList.add("bubble__song--click");
 				song__cover[1].classList.add("song__cover--click");
 				
