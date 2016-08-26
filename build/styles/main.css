@@ -313,20 +313,34 @@ header .hint {
 .song__info span {
   display: block;
 }
-@media (min-width: 0) and (max-width: 768px) {
+@media (min-width: 0) and (max-width: 767px) {
   header {
     margin-bottom: 30px;
     margin-top: -30px;
   }
-  .bubble__song--one,
-  .bubble__song--two,
-  .bubble__song--three,
-  .bubble__song--four,
-  .bubble__song--five {
-    -webkit-transform: none;
-            transform: none;
-    margin: 0 0 5% 5%;
-    display: inline-block;
+  .bubble--one {
+    -webkit-transform: translate(20%, 12%);
+            transform: translate(20%, 12%);
+  }
+  .bubble--two {
+    -webkit-transform: translate(10%, 0%);
+            transform: translate(10%, 0%);
+  }
+  .bubble--three {
+    -webkit-transform: translate(17%, -5%);
+            transform: translate(17%, -5%);
+  }
+  .bubble--four {
+    -webkit-transform: translate(11%, -10%);
+            transform: translate(11%, -10%);
+  }
+  .bubble--five {
+    -webkit-transform: translate(2%, -15%);
+            transform: translate(2%, -15%);
+  }
+  .bubble--six {
+    -webkit-transform: translate(22%, -80%);
+            transform: translate(22%, -80%);
   }
   .bubble__song--hover,
   .song__cover {
@@ -422,5 +436,31 @@ header .hint {
     transition: height 1.5s ease-in-out, width 1.5s ease-in-out;
     -webkit-transition-delay: 0.1s;
             transition-delay: 0.1s;
+  }
+}
+@media (min-width: 768) and (max-width: 1024px) {
+  .bubble--one {
+    -webkit-transform: translate(20%, 12%);
+            transform: translate(20%, 12%);
+  }
+  .bubble--two {
+    -webkit-transform: translate(10%, 0%);
+            transform: translate(10%, 0%);
+  }
+  .bubble--three {
+    -webkit-transform: translate(17%, -5%);
+            transform: translate(17%, -5%);
+  }
+  .bubble--four {
+    -webkit-transform: translate(11%, -10%);
+            transform: translate(11%, -10%);
+  }
+  .bubble--five {
+    -webkit-transform: translate(2%, -15%);
+            transform: translate(2%, -15%);
+  }
+  .bubble--six {
+    -webkit-transform: translate(22%, -80%);
+            transform: translate(22%, -80%);
   }
 }

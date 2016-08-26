@@ -1,19 +1,23 @@
-@media (min-width 0) and (max-width 768px)
+@media (min-width 0) and (max-width 767px)
 	
 	header
 		margin-bottom 30px
 		margin-top -30px
 
-	.bubble__song
+	.bubble
 		&--one
+			transform translate(20%, 12%)
 		&--two
+			transform translate(10%, 0%)
 		&--three
+			transform translate(17%, -5%)
 		&--four
+			transform translate(11%, -10%)
 		&--five
-			transform none
-			margin 0 0 5% 5%
-			display inline-block
-
+			transform translate(2%, -15%)
+		&--six
+			transform translate(22%, -80%)
+		
 	.bubble__song--hover,.song__cover
 		main__bubble(70px)
 		
@@ -59,3 +63,20 @@
 			
 	.bubble__song--hover,.song__cover
 		main__bubble(120px)
+
+
+@media (min-width 768) and (max-width 1024px)
+
+	.bubble
+		&--one
+			transform translate(20%, 12%)
+		&--two
+			transform translate(10%, 0%)
+		&--three
+			transform translate(17%, -5%)
+		&--four
+			transform translate(11%, -10%)
+		&--five
+			transform translate(2%, -15%)
+		&--six
+			transform translate(22%, -80%)
