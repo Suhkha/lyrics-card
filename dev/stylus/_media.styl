@@ -1,17 +1,61 @@
-@media (min-width 0) and (max-width 413px)
-	.bubble
-		&--type-one
-		&--type-five
-		&--type-three
-		&--type-two	
-		&--type-four
-			margin-left 0%
-						
-@media (min-width 414px) and (max-width 1024px)
-	.bubble
-		&--type-one
-		&--type-five
-		&--type-three
-		&--type-two	
-		&--type-four
-			margin-left 3%
+@media (min-width 0) and (max-width 768px)
+	
+	header
+		margin-bottom 30px
+		margin-top -30px
+
+	.bubble__song
+		&--one
+		&--two
+		&--three
+		&--four
+		&--five
+			transform none
+			margin 0 0 5% 5%
+			display inline-block
+
+	.bubble__song--hover,.song__cover
+		main__bubble(70px)
+		
+	.bubble__song--hover
+		layer("after",100px, $wisteria, -10)
+		layer("before",170px, $east_side, -15)
+
+			
+	.bubble__song--click, .song__cover--click
+		main__bubble(250px)
+
+	.bubble__song--click
+		layer("after",350px, $wisteria, -10)
+		layer("before",500px, $east_side, -15)
+		
+	
+	.song
+		right 0
+		bottom 25px
+		left 50px
+		&__lyrics
+			margin 0
+			font-size 15px
+			text-align left
+		&__play
+			margin 15px 0 15px 50px
+			position absolute
+		&__info
+			margin 75px 50px 0 0
+			span
+				text-align center
+				font-size 12px
+
+@media (min-width 768px) and (min-height 1024px)
+	.bubble__song
+		&--one
+		&--two
+		&--three
+		&--four
+		&--five
+			transform none
+			margin 0 0 5% 10%
+			
+	.bubble__song--hover,.song__cover
+		main__bubble(120px)

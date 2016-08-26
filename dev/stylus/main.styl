@@ -5,64 +5,41 @@ $white = #FFFFFF
 $gray = #C0C0C0
 $black = #000000
 
-@keyframes fadeIn {
-  from {
-    opacity: 0
-  }
-  to {
-    opacity: 1
-  }
-}
+@import "_keyframes.styl"
+
 
 body
 	background $affair
 	font-family 'Titillium Web', sans-serif
+	overflow hidden
 
+@import "_bubbles-floating.styl"		
+
+	
 .container
 	background transparent
-	margin 60px auto
-
+	margin 10px auto
+	
 .left
 	float left
-	
+
 .right
 	float right
 	
-.bubble
-	&--type-one
-	&--type-five
-	&--type-three
-		margin-left 10%
-	&--type-two	
-	&--type-four
-		margin-left 15%
-
-.song__cover	
-	opacity 0.5
-
-.hidden__song
-	display none
-	float right
+.group__bubbles
+	margin-bottom 30px
+	
+header
+	margin-bottom 80px	
+	.title
+	.hint 
+		color $white
+		text-transform uppercase
+	
 
 @import "_functions.styl"
-			
-.bubble__song--hover,.song__cover
-	main__bubble(120px)
+@import "_bubble.styl"
 	
-.bubble__song--hover
-	configuration__layer()
-	layer("after",150px, $wisteria, -10)
-	layer("before",220px, $east_side, -15)
-	hover__layer()
-	
-.bubble__song--click, .song__cover--click
-	main__bubble(400px)
-
-.bubble__song--click
-	layer("after",500px, $wisteria, -10)
-	layer("before",700px, $east_side, -15)
-	persistent__layer()
-	
-
 @import "_song.styl"
+
 @import "_media.styl"

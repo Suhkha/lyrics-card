@@ -1,0 +1,20 @@
+.bubble__song
+	display inline-block	
+		
+.bubble__song--hover,.song__cover
+	main__bubble(170px)
+	
+.bubble__song--hover
+	configuration__layer()
+	layer("after",150px, $wisteria, -10)
+	layer("before",220px, $east_side, -15)
+	hover__layer()
+	
+	
+.bubble__song--click, .song__cover--click
+	main__bubble(400px)
+
+.bubble__song--click
+	layer("after",500px, $wisteria, -10)
+	layer("before",700px, $east_side, -15)
+	persistent__layer()

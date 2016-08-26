@@ -11,7 +11,7 @@ function bubbleEfect(){
 		bubbles[i].addEventListener("click", function(){
 
 			song__cover = this.childNodes;
-			song = this.nextElementSibling;
+			song = song__cover[1].nextElementSibling;
 
 			if(event.target.className == "img-responsive song__cover song__cover--click"){
 
